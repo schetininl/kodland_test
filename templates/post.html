@@ -2,9 +2,16 @@
 {% block title %}Главная{% endblock %}
 {% block content %}
 
+<style>
+    body {background: #E5E5E5;}
+</style>
+
 <div class="article">
     <h1 class="art_h">{{post.title}}</h1>
-    <img class="art_image" src="">
+    {% load thumbnail %}
+    {% thumbnail post.image "1000x528" crop="center"  upscale=True as im %}
+    <img class="art_image" src="{{im.url}}">
+    {% endthumbnail %}
     <p>{{ post.text|linebreaksbr }}</p>
 </div>
 

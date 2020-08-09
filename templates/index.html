@@ -2,30 +2,36 @@
 {% block title %}Главная{% endblock %}
 {% block content %}
 
+    {% for last in last %}
     <div class="top_wrapper">
         <div class="last_article">
             <p class="new_caption">NEW</p>
-            {% for last in last %}
             <h1 class="main_h">{{ last.title }}</h1>
-            <p class="last_art_text">{{ last.title|truncatechars:180 }}</p>
-            <a href="#" class="last_art_read">Читать</a>
-            {% endfor %}
+            <p class="last_art_text">{{ last.text|truncatechars:180 }}</p>
+            <a href="{% url 'post' last.pk %}" class="last_art_read">Читать</a>
         </div>
     </div>
 
-    <img src="img/mainart.png" class="main_image">
+    {% load thumbnail %}
+    {% thumbnail last.image "1000x723" crop="center"  upscale=True as im %}
+        <img src="{{im.url}}" class="main_image">
+    {% endthumbnail %}
+    {% endfor %}
 
     <div class="line2"></div>
 
     <div class="article_wrapper">
         <h2 class="other_arts">Другие статьи</h2>
-        {% for post in posts %}
-        <a href="#" class="article_view">
-            <p class="art_date">{{ post.pub_date|date:"d F Y h:m" }}</p>
-            <img src="img/art.png" class="art_img" style="background-color: red;">
-            <p class="art_link">{{ post.title }}</p>
-        </a>
-        {% endfor %}
+            {% for post in posts %}
+            <a href="{% url 'post' post.pk %}" class="article_view">
+                <p class="art_date">{{ post.pub_date|date:"d F Y h:m" }}</p>
+                {% load thumbnail %}
+                {% thumbnail post.image "1000x723" crop="center"  upscale=True as im %}
+                <img src="{{im.url}}" class="art_img">
+                {% endthumbnail %}
+                <p class="art_link">{{ post.title }}</p>
+            </a>
+            {% endfor %}
     </div>
 
 {% endblock %}

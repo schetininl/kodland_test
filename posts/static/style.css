@@ -5,12 +5,16 @@ html, body {
 }
 
 header {
+    background-color: #FFFFFF;
+}
+
+.header {
     height: 80px;
     width: 1298px;
     margin: 0 auto;
 }
 
-.header {
+.header_inner {
     height: 56px;
     top: 24px;
     width: 1200px;
@@ -227,6 +231,7 @@ header {
     border-radius: 3px;
     
     text-decoration: none;
+    vertical-align: top;
 }
 
 .art_date {
@@ -285,11 +290,7 @@ header {
 }
 
 .art_h {
-    position: static;
     width: 400px;
-    height: 123px;
-    left: 0px;
-    top: 0px;
 
     font-style: normal;
     font-weight: bold;
@@ -303,9 +304,6 @@ header {
 }
 
 .art_image {
-    position: static;
     width: 607px;
     height: 320px;
-    left: 0px;
-    top: 147px;
 }
