@@ -36,31 +36,25 @@ header {
     width: 46px;
     height: 28px;
     left: 149px;
-
     font-size: 22px;
     line-height: 26px;
-
     color: #010101;
 }
 
 .new_article {
     padding: 6px 16px;
     right: 0;
-
     position: absolute;
     width: 132px;
     height: 18px;
-    
     background: #315AF2;
     border: 1px solid #315AF2;
     border-radius: 6px;
-
     font-size: 14px;
     line-height: 20px;
     text-decoration: none;
     color: #FFFFFF;
     text-align: center;
-
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
@@ -80,39 +74,31 @@ header {
     height: 338px;
     top: 120px;
     margin-left: 49px;
-
 }
 
 .new_caption {
     position: absolute;
-    
     font-size: 16px;
     line-height: 20px;
-
     display: flex;
     align-items: center;
     letter-spacing: -0.416667px;
-
     color: #E9399C;
 }
 
 .main_h {
     position: absolute;
     height: 112px;
-    
     margin-top: 0;
     top: 60px;
-
     font-family: 'MuseoModerno', cursive;
     font-style: normal;
     font-weight: bold;
     font-size: 44px;
     line-height: 128%;
-
     display: flex;
     align-items: center;
     letter-spacing: -0.416667px;
-
     color: #315AF2;
 }
 
@@ -121,7 +107,6 @@ header {
     width: 391px;
     height: 108px;
     top: 182px;
-    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -129,7 +114,6 @@ header {
     display: flex;
     align-items: center;
     letter-spacing: -0.416667px;
-
     color: #000000;
 }
 
@@ -137,16 +121,13 @@ header {
     display: flex;
     flex-direction: row;
     padding: 10px 28px;
-
     position: absolute;
     width: 110px;
     height: 36px;
     top: 320px;
-
     background: #315AF2;
     border: 1px solid #315AF2;
     border-radius: 6px;
-
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -155,9 +136,7 @@ header {
     align-items: center;
     letter-spacing: -0.416667px;
     text-decoration: none;
-
     color: #FFFFFF;
-
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
@@ -171,7 +150,6 @@ header {
     height: 0px;
     width: 100%;
     top: 80px;
-
     border: 2px solid #CDCDCD;
 }
 
@@ -181,7 +159,6 @@ header {
     width: 100%;
     left: 0px;
     top: 540px;
-
     border: 2px solid #CDCDCD;
 }
 
@@ -191,7 +168,6 @@ header {
     height: 422px;
     left: 796px;
     top: 118px;
-
     object-fit: cover
 }
 
@@ -199,7 +175,6 @@ header {
     width: 231px;
     height: 38px;
     margin: 0px 0px 26px 49px;
-
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -207,7 +182,6 @@ header {
     display: flex;
     align-items: center;
     letter-spacing: -0.416667px;
-
     color: #315AF2;
 }
 
@@ -225,11 +199,9 @@ header {
     width: 335px;
     height: 300px;
     margin: 0px 49px 32px 49px;
-
     border: 2px solid #CDCDCD;
     box-sizing: border-box;
     border-radius: 3px;
-    
     text-decoration: none;
     vertical-align: top;
 }
@@ -239,17 +211,12 @@ header {
     width: 100px;
     height: 20px;
     margin: 20px 0px 0px 20px;
-
-    font-family: Circe Rounded;
     font-size: 12px;
     line-height: 20px;
-
     display: flex;
     align-items: center;
     letter-spacing: -0.416667px;
-
     color: #979797;
-
     z-index: 2;
 }
 
@@ -258,7 +225,6 @@ header {
     width: 217px;
     height: 112px;
     margin: -20px 0px 0px 62px;
-
     object-fit: cover;
     z-index: 1;
 }
@@ -267,16 +233,13 @@ header {
     width: 248px;
     height: 87px;
     margin: 35px auto;
-
     font-size: 24px;
     line-height: 120%;
-
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.416667px;
     text-decoration: none;
-
     color: #315AF2;
 }
 
@@ -291,16 +254,12 @@ header {
 
 .art_h {
     width: 400px;
-
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 128%;
-
     letter-spacing: -0.416667px;
-
     color: #315AF2;
-
 }
 
 .art_image {
@@ -320,9 +279,7 @@ header {
     height: 44px;
     font-size: 24px;
     line-height: 52px;
-
     letter-spacing: -0.416667px;
-
     color: #315AF2;
 }
 
@@ -342,18 +299,14 @@ header {
     height: 50px;
     left: 1014px;
     top: 235px;
-
     background: #E9399C;
     border-radius: 3px;
     border: 1px solid #E9399C;
-
     font-family: 'MuseoModerno', cursive;
     font-size: 18px;
     line-height: 22px;
     cursor: pointer;
-
     color: #FFFFFF;
-
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
@@ -371,7 +324,6 @@ header {
     width: 298px;
     left: 1014px;
     top: 320px;
-
     border: 2px solid #CDCDCD;
     box-sizing: border-box;
     border-radius: 3px;
@@ -381,9 +333,7 @@ header {
     font-size: 24px;
     line-height: 31px;
     margin: 10px;
-
     text-align: center;
-
     color: #315AF2;
 }
 
@@ -391,19 +341,15 @@ header {
     width: 155px;
     height: 50px;
     margin: 0 0 26px 72px;
-
     background: #315AF2;
     border-radius: 3px;
     border: 1px solid #315AF2;
     cursor: pointer;
-
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-
     color: #FFFFFF;
-
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
