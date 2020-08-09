@@ -1,7 +1,57 @@
 {% extends "base.html" %}
-{% block title %}Главная{% endblock %}
+{% block title %}Новая статья{% endblock %}
 {% block content %}
 
+<div class="base_wrapper">
+    <h1 class="new_h" style="color: #315AF2;">Добавить статью</h1>
+    <form method="POST" enctype="multipart/form-data" class="new_form">
+        {% csrf_token %}
+        {{form.as_p}} 
+        <div class="img_upload">
+            <p class="file_p">Загрузить изображение</p>  
+            <button id="file_btn" onclick="document.getElementById('id_image').click(); event.preventDefault();">Файл</button>
+            <img src="" id="uploaded_image">
+            <button id="image_delete" 
+                onclick="document.getElementById('id_image').value = '';
+                document.getElementById('uploaded_image').style.display = 'none'; 
+                document.getElementById('image_delete').style.display = 'none';
+                document.getElementById('file_btn').style.display = 'block';
+                event.preventDefault();"
+            >
+            </button>
+        </div>
+        <input type="submit" value="Опубликовать" class="new_submit">
+    </form>
+</div>
 
+<script>
+    (function() {
+      var inpElem = document.getElementById('id_image'),
+          image = document.getElementById('uploaded_image');
+          file_btn = document.getElementById('file_btn');
+          image_delete = document.getElementById('image_delete');
+
+      
+      inpElem.addEventListener("change", function(e) {
+          preview(this.files[0]);
+      });
+      
+      function preview(file) {
+        if ( file.type.match(/image.*/) ) {
+          var reader = new FileReader(), img;
+          
+          reader.addEventListener("load", function(event) {
+            image.style.display = 'block'
+            image.src = event.target.result;
+            
+            file_btn.style.display = 'none'
+            image_delete.style.display = 'block'
+          });
+          
+          reader.readAsDataURL(file);
+        }
+      }
+    })();
+  </script>
 
 {% endblock %}

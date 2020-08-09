@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Post
+from .forms import PostForm
 
 
 def index(request):
@@ -10,7 +11,14 @@ def index(request):
 
 
 def new_post(request):
-    return render(request, "new_post.html", {"test": "test"})
+    form = PostForm(request.POST or None, files=request.FILES or None)
+    if request.method == "POST" and form.is_valid():
+        new_post = form.save(commit=False)
+        new_post.author = request.user
+        new_post.save()
+        return redirect("index")      
+    return render(request, "new_post.html", {"form": form})
+
 
 def post_view(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
