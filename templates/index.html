@@ -7,7 +7,7 @@
         <div class="last_article">
             <p class="new_caption">NEW</p>
             <h1 class="main_h">{{ last.title }}</h1>
-            <p class="last_art_text">{{ last.text|truncatechars:180 }}</p>
+            <div class="last_art_text">{{ last.text|truncatechars:180|safe }}</div>
             <a href="{% url 'post' last.pk %}" class="last_art_read">Читать</a>
         </div>
     </div>

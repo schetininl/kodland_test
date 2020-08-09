@@ -326,9 +326,9 @@ header {
     color: #315AF2;
 }
 
-#id_text {
+.tox-tinymce{
     position: absolute;
-    top: 320px;
+    top: 121px;
     width: 881px;
     height: 478px;
     border: 2px solid #CDCDCD;
@@ -362,7 +362,7 @@ header {
     color: #E9399C;
 }
 
-.input_image {
+#id_image {
     display: none;
 }
 

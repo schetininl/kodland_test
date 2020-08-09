@@ -12,7 +12,7 @@
     {% thumbnail post.image "1000x528" crop="center"  upscale=True as im %}
     <img class="art_image" src="{{im.url}}">
     {% endthumbnail %}
-    <p>{{ post.text|linebreaksbr }}</p>
+    {{ post.text|safe }}
 </div>
 
 {% endblock %}

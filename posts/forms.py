@@ -13,3 +13,10 @@ class PostForm(ModelForm):
             'text': '',
             'image': (''),
         }
+
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        self.fields['title'].widget.attrs.update({
+            'placeholder': 'Введите название статьи'
+        })
+        
